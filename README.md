@@ -22,7 +22,7 @@ sudo dnf install glibc-locale-source
 ```
 
 - copy the files you want your mod to be based on. In my case, I will use `en_US` and make
-a copy as `en_US_mks`. Do the same for the other files as in the example below.
+a copy as `en_US_mks`. Do the same for the other files as in the example below,
 ```console
 cd /usr/share/i18n/locales
 sudo cp en_US en_US_mks
@@ -35,12 +35,7 @@ sudo cp iso14651_t1_common iso14651_t1_common_mks
 - open the file `iso14651_t1` and change the line
 `copy "iso14651_t1_common"` into `copy "iso14651_t1_common_mks"`
 
-- then we proceed changing the actual entries in the iso file,
-```console
-sudo vim iso14651_t1_common_mks
-```
-
-- change the line of the character `<U002E>` (full stop) as follows
+- now we proceed changing the actual entries in the iso common file. Open the file `iso14651_t1_common_mks` and change the line of the character `<U002E>` (full stop) as follows
 ```console
 <U002E> <RES-1>;IGNORE;IGNORE;<U002E> % FULL STOP
 ```
@@ -50,7 +45,7 @@ sudo vim iso14651_t1_common_mks
 <U005F> <BLK>;IGNORE;IGNORE;<U005F> % LOW LINE
 ```
 
-- then compile the new locale
+- compile the new locale
 ```console
 sudo localedef -c -i en_US_mks -f UTF-8 en_US_mks.UTF-8
 ```
@@ -61,4 +56,4 @@ LANG=en_US_mks.utf8
 LC_COLLATE=en_US_mks.utf8
 ```
 
-- reboot the system (depending on the system, logging off probably will not be enough).
+- finally, reboot the system (depending on the system, logging off probably will not be enough).
