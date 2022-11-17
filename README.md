@@ -1,5 +1,7 @@
 # locale-fix-ordering
 
+**NB: to work on the next files you need super user permissions**
+
 This is a guide to add a new locale file with little mods to order hidden files first, underscored files second, and finally a case insensitive alphabetical order.
 
 **How I am ordering:**
