@@ -1,8 +1,10 @@
 # locale-fix-ordering
 
-**NB: to work on the next files you need super user permissions**
+**NB_1: for this guide, you will need superuser permissions.**
 
-This is a guide to add a new locale file with little mods to order hidden files first, underscored files second, and finally a case insensitive alphabetical order.
+**NB_2: when a bigger update of the system happens, your files will be likely deleted or overwritten. You will need to follow this guide again to fix the ordering.**
+
+This is a guide to add a new locale file with little mods like hidden files first, underscored files second, and a case-insensitive alphabetical order.
 
 **How I am ordering:**
 1. Hidden files (.)
